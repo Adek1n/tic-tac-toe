@@ -1,0 +1,83 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+:root{
+    --turn:"X";
+    --primary:#6482AD;
+    --secondary:#7FA1C3;
+    --ternary:#E2DAD6;
+    --quarternary:#F5EDED;
+}
+body{
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0px;
+    background-image: radial-gradient(var(--primary),var(--quarternary));
+}
+h1{
+    padding: 0px 20px 0px 20px;
+    background-color: var(--secondary);
+    color: var(--ternary);
+    border: 2px solid var(--quarternary);
+    border-radius: 15px;
+}
+.edu-au-vic-wa-nt-hand-Heavy {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+.edu-au-vic-wa-nt-hand-Light {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+.game-board{
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 10px;
+    
+}
+.game-table{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.result-display{
+    color: var(--secondary);
+    border: 5px solid var(--primary);
+    border-radius: 15px;
+    text-align: center;
+    background-color: var(--ternary);
+    width: 500px;
+    margin-top: 50px;
+    font-size: 4em;
+}
+.game-cell{
+    color: var(--primary);
+    background-color: var(--ternary);
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border: 2px solid var(--primary);
+    font-size: 3.4em;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.inactive:hover::before{
+    color: var(--primary);
+    opacity: 30%;
+    max-width: 100px;
+    content: var(--turn);
+}
